@@ -1,6 +1,6 @@
 
 a<-matrix(c(-1, -2, 1, 1), 2, 2)
-
+#make function which makes list of functions
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
     set <- function(y) {
@@ -16,7 +16,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 resultslist<-makeCacheMatrix(a)
-
+# calculates the mean of spesific vector, while checking if mean has allready calculated and cached.
 cacheSolve<- function(x, ...) {
     m <- x$getsolve()
     if(!is.null(m)) {
